@@ -1,0 +1,13 @@
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'azurepipeline'
+    subscriptionId: '39814cc3-564d-4a5b-91d2-700cf215252d'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'azurepipeline'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/waimingliew/azurepipeline/main/store1'
+    overrideParameters: '-projectName AzurePipeLine'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
